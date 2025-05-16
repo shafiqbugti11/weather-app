@@ -1,38 +1,292 @@
+/* body {
+  font-family: sans-serif;
+  background: #f0f4f8;
+  text-align: center;
+  padding: 2rem;
+}
+input {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+}
+button {
+  padding: 0.5rem 1rem;
+} */
+
+
+
+
+
+
+
+
+
+
+/* body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background-color: #f0f4f8;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button:hover {
+  opacity: 0.9;
+}
+
+.toggle-btn {
+  background-color: #444;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.fav-btn {
+  background-color: #f4b400;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.delete-btn {
+  background-color: #ff4d4d;
+  color: #fff;
+  margin-left: 0.5rem;
+}
+
+ul.favorites-list {
+  list-style: none;
+  padding: 0;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+ul.favorites-list li {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background-color: #e3f2fd;
+  border-radius: 5px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+body.dark ul.favorites-list li {
+  background-color: #1f1f1f;
+} */
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* 🌐 Base Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background-color: #f0f4f8;
+  color: #222;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
+  background-color: #1c1c1c;
+  color: #f0f0f0;
+}
+
+/* 📱 App Container */
+.App {
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+  transition: background 0.3s ease;
+}
+
+body.dark .App {
+  background: #2b2b2b;
+}
+
+/* 🔍 Input Styles */
+input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+/* 🔘 Buttons */
+button {
+  padding: 0.6rem 1rem;
+  margin: 0.3rem 0.25rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: auto;
+}
+
+button:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+.toggle-btn {
+  background-color: #3b82f6;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.fav-btn {
+  background-color: #fbbf24;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+/* 🧭 Layout Utilities */
+.weather-card {
+  background-color: #f3f4f6;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+body.dark .weather-card {
+  background-color: #3f3f46;
+}
+
+ul.favorites-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+ul.favorites-list li {
+  background-color: #e0f2fe;
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.dark ul.favorites-list li {
+  background-color: #374151;
+}
+
+/* ✨ Animations */
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out forwards;
+  opacity: 0;
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-out forwards;
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+@keyframes fadeIn {
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+ul li {
+  animation: suggestionEntry 0.3s ease-out forwards;
+  opacity: 0;
+  transform: translateY(5px);
+}
+
+@keyframes suggestionEntry {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Mobile-Friendly Media Query */
+@media (max-width: 480px) {
+  .App {
+    padding: 1rem;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 0.75rem;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  ul.favorites-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  ul.favorites-list li button {
+    width: 100%;
+    margin-top: 0.4rem;
+  }
+
+  .weather-card {
+    margin-top: 1rem;
+    padding: 1rem;
   }
 }
