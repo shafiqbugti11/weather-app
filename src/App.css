@@ -1,110 +1,4 @@
-/* body {
-  font-family: sans-serif;
-  background: #f0f4f8;
-  text-align: center;
-  padding: 2rem;
-}
-input {
-  padding: 0.5rem;
-  margin-right: 0.5rem;
-}
-button {
-  padding: 0.5rem 1rem;
-} */
-
-
-
-
-
-
-
-
-
-
-/* body {
-  font-family: 'Segoe UI', sans-serif;
-  margin: 0;
-  padding: 2rem;
-  background-color: #f0f4f8;
-  color: #333;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-body.dark {
-  background-color: #121212;
-  color: #f0f0f0;
-}
-
-.App {
-  text-align: center;
-}
-
-input {
-  padding: 0.5rem;
-  margin-right: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  padding: 0.5rem 1rem;
-  margin: 0.25rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  opacity: 0.9;
-}
-
-.toggle-btn {
-  background-color: #444;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-.fav-btn {
-  background-color: #f4b400;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-.delete-btn {
-  background-color: #ff4d4d;
-  color: #fff;
-  margin-left: 0.5rem;
-}
-
-ul.favorites-list {
-  list-style: none;
-  padding: 0;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-ul.favorites-list li {
-  margin: 0.5rem 0;
-  padding: 0.5rem;
-  background-color: #e3f2fd;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-body.dark ul.favorites-list li {
-  background-color: #1f1f1f;
-} */
-
-
-
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
-/* 🌐 Base Styles */
 body {
   font-family: 'Inter', sans-serif;
   margin: 0;
@@ -118,8 +12,6 @@ body.dark {
   background-color: #1c1c1c;
   color: #f0f0f0;
 }
-
-/* 📱 App Container */
 .App {
   max-width: 500px;
   margin: auto;
@@ -134,8 +26,6 @@ body.dark {
 body.dark .App {
   background: #2b2b2b;
 }
-
-/* 🔍 Input Styles */
 input {
   width: 100%;
   padding: 0.6rem 1rem;
@@ -151,8 +41,6 @@ input:focus {
   outline: none;
   border-color: #3b82f6;
 }
-
-/* 🔘 Buttons */
 button {
   padding: 0.6rem 1rem;
   margin: 0.3rem 0.25rem;
@@ -184,8 +72,6 @@ button:hover {
   background-color: #ef4444;
   color: white;
 }
-
-/* 🧭 Layout Utilities */
 .weather-card {
   background-color: #f3f4f6;
   padding: 1rem;
@@ -219,7 +105,7 @@ body.dark ul.favorites-list li {
   background-color: #374151;
 }
 
-/* ✨ Animations */
+
 .fade-in {
   animation: fadeIn 0.6s ease-in-out forwards;
   opacity: 0;
@@ -256,8 +142,6 @@ ul li {
     transform: translateY(0);
   }
 }
-
-/* 📱 Mobile-Friendly Media Query */
 @media (max-width: 480px) {
   .App {
     padding: 1rem;
